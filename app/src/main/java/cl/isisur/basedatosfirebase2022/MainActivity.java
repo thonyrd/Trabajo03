@@ -1,5 +1,6 @@
 package cl.isisur.basedatosfirebase2022;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,8 +11,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +65,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    private void listarDatos() {
+        databaseReference.child("Libro").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+             ListLibro.clear();
+             for (DataSnapshot objs : snapshot.getChildren()){
+                 Libro li =objs.getValue(Libro.class);
+                 ListLibro.add(li);
+                 arrayAdapterLibro =new ArrayAdapter<Libro>(MainActivity.this, android.R.layout.simple_expandable_list_item_1,ListLibro);
+                 lvListadoLibros.setAdapter(arrayAdapterLibro);
+             }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 
     private void inicializarFireBase(){
         FirebaseApp.initializeApp(this);
