@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btEliminar=findViewById(R.id.btEliminar);
         lvListadoLibros=findViewById(R.id.lvListadoLibros);
         inicializarFireBase();
-        //listarDatos();
+        listarDatos();
 
         bTBoton.setOnClickListener(new View.OnClickListener() {
             @Override
