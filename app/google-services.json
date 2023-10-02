@@ -1,124 +1,46 @@
 {
   "project_info": {
-    "project_number": "128302710666",
-    "firebase_url": "https://basedatosfirebase2022-default-rtdb.firebaseio.com",
-    "project_id": "basedatosfirebase2022",
-    "storage_bucket": "basedatosfirebase2022.appspot.com"
+    "project_number": "581032618038",
+    "firebase_url": "https://proyectoreciclaje-bd7c1-default-rtdb.firebaseio.com",
+    "project_id": "proyectoreciclaje-bd7c1",
+    "storage_bucket": "proyectoreciclaje-bd7c1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:128302710666:android:9574d5e0da87846dbe5273",
+        "mobilesdk_app_id": "1:581032618038:android:a1b9c8e94a110727d4d097",
         "android_client_info": {
           "package_name": "cl.isisur.basedatosfirebase2022"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB3fI7HKDsHyDK2suO_KwYmYpcBryD7Xh4"
+          "current_key": "AIzaSyAXZOoPcqZ1q951WGqnR8OO85NO_BNzUN4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:128302710666:android:dba2b4df08ed4fd0be5273",
+        "mobilesdk_app_id": "1:581032618038:android:da7ec46ce3803198d4d097",
         "android_client_info": {
-          "package_name": "cl.isisur.basedatosfirebase20222"
+          "package_name": "com.cl.aplicacion"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB3fI7HKDsHyDK2suO_KwYmYpcBryD7Xh4"
+          "current_key": "AIzaSyAXZOoPcqZ1q951WGqnR8OO85NO_BNzUN4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:128302710666:android:5eceb1c5a9bb597bbe5273",
-        "android_client_info": {
-          "package_name": "cl.isisur.myapplication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB3fI7HKDsHyDK2suO_KwYmYpcBryD7Xh4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:128302710666:android:84f82c1c55287526be5273",
-        "android_client_info": {
-          "package_name": "cl.isisur.pruebafirebase2021_11"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB3fI7HKDsHyDK2suO_KwYmYpcBryD7Xh4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "128302710666-j7bq0pt8la1l0e32vruemsqmtp5s6pia.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
