@@ -26,9 +26,12 @@ import cl.isisur.basedatosfirebase2022.Clases.Libro;
 
 public class MainActivity extends AppCompatActivity {
         private List<Libro> ListLibro = new ArrayList<Libro>();
+        private List<String> ListLibroNombre = new ArrayList();
         ArrayAdapter<Libro> arrayAdapterLibro;
+        ArrayAdapter<String> arrayAdapterString;
 
-        EditText eTNombre,eTEditorial;
+
+    EditText eTNombre,eTEditorial;
         Button bTBoton, btEliminar;
         ListView lvListadoLibros;
 
@@ -73,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
              for (DataSnapshot objs : snapshot.getChildren()){
                  Libro li =objs.getValue(Libro.class);
                  ListLibro.add(li);
-                 arrayAdapterLibro =new ArrayAdapter<Libro>(MainActivity.this, android.R.layout.simple_expandable_list_item_1,ListLibro);
-                 lvListadoLibros.setAdapter(arrayAdapterLibro);
+                 ListLibroNombre.add(""+li.getNombre()+" "+li.getEstado());
+                 arrayAdapterString =new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1,ListLibroNombre);
+                 lvListadoLibros.setAdapter(arrayAdapterString);
              }
             }
 
