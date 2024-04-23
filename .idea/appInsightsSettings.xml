@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AppInsightsSettings">
+    <option name="tabSettings">
+      <map>
+        <entry key="Android Vitals">
+          <value>
+            <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="aire.contaminado.android" />
+                </ConnectionSetting>
+              </option>
+              <option name="failureTypes">
+                <list>
+                  <option value="FATAL" />
+                </list>
+              </option>
+              <option name="signal" value="SIGNAL_UNSPECIFIED" />
+              <option name="timeIntervalDays" value="SEVEN_DAYS" />
+              <option name="visibilityType" value="ALL" />
+            </InsightsFilterSettings>
+          </value>
+        </entry>
+        <entry key="Firebase Crashlytics">
+          <value>
+            <InsightsFilterSettings>
+              <option name="connection">
+                <ConnectionSetting>
+                  <option name="appId" value="cl.isisur.basedatosfirebase2022" />
+                  <option name="mobileSdkAppId" value="1:157388345417:android:62ff4683de99c7db0f2f98" />
+                  <option name="projectId" value="ppipvg2021" />
+                  <option name="projectNumber" value="157388345417" />
+                </ConnectionSetting>
+              </option>
+              <option name="signal" value="SIGNAL_UNSPECIFIED" />
+              <option name="timeIntervalDays" value="THIRTY_DAYS" />
+              <option name="visibilityType" value="ALL" />
+            </InsightsFilterSettings>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
