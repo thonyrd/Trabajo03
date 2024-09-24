@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="15dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E7E67B"
+    android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
 
@@ -13,8 +14,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar Libro"
+        android:text="Ingresar Usuario"
         android:textAlignment="center"
+        android:textColor="#120D0D"
         android:textSize="34sp"
         android:textStyle="bold|italic" />
 
@@ -22,27 +24,30 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre" />
+        android:text="Nombre"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/eTNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Editorial" />
+        android:text="Correo Electronico"
+        android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/eTEditorial"
+        android:id="@+id/etCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/bTAgregar"
@@ -50,24 +55,11 @@
         android:layout_height="wrap_content"
         android:text="Agregar" />
 
-    <Button
-        android:id="@+id/btEliminar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Eliminar" />
+        android:layout_height="match_parent"
+        android:background="@drawable/oig4">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listado de Libros"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold|italic" />
-
-    <ListView
-        android:id="@+id/lvListadoLibros"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

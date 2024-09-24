@@ -3,6 +3,7 @@ package cl.isisur.basedatosfirebase2022;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,23 +18,29 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 import cl.isisur.basedatosfirebase2022.Clases.Libro;
+import cl.isisur.basedatosfirebase2022.Clases.Usuario;
 
 
 public class MainActivity extends AppCompatActivity {
-        private List<Libro> ListLibro = new ArrayList<Libro>();
-        private List<String> ListLibroNombre = new ArrayList();
-        ArrayAdapter<Libro> arrayAdapterLibro;
-        ArrayAdapter<String> arrayAdapterString;
+    private List<Libro> ListLibro = new ArrayList<Libro>();
+    private List<String> ListLibroNombre = new ArrayList();
+    ArrayAdapter<Libro> arrayAdapterLibro;
+    ArrayAdapter<String> arrayAdapterString;
 
 
-    EditText eTNombre,eTEditorial;
-        Button bTBoton, btEliminar;
-        ListView lvListadoLibros;
+    private List<Usuario> ListUsuario= new ArrayList<Usuario>();
+
+
+
+    EditText eTNombre,eTEmail;
+    Button bTBoton;
+
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -44,50 +51,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         eTNombre=findViewById(R.id.eTNombre);
-        eTEditorial=findViewById(R.id.eTEditorial);
+        eTEmail= findViewById(R.id.etCorreo);
+
         bTBoton=findViewById(R.id.bTAgregar);
-        btEliminar=findViewById(R.id.btEliminar);
-        lvListadoLibros=findViewById(R.id.lvListadoLibros);
+
+        Intent intent= new Intent(this, MainActivity2.class);
+
         inicializarFireBase();
-        listarDatos();
+
 
         bTBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Libro libro = new Libro();
+                Usuario Usuario = new Usuario();
                 //libro.setIdAutor("11111");
-                libro.setIdAutor(UUID.randomUUID().toString());
-                libro.setNombre(eTNombre.getText().toString());
-                libro.setEstado(eTEditorial.getText().toString());
-                databaseReference.child("Libro").child(libro.getIdAutor()).setValue(libro);
+                Usuario usuario = new Usuario();
+                usuario.setIdUsuario(UUID.randomUUID().toString());
+                usuario.setNombre(eTNombre.getText().toString());
+                usuario.setEmail(eTEmail.getText().toString());
 
+
+                databaseReference.child("Usuario").child(usuario.getIdUsuario()).setValue(usuario);
+
+                startActivity(intent);
 
             }
         });
 
 
     }
-    private void listarDatos() {
-        databaseReference.child("Libro").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-             ListLibro.clear();
-             for (DataSnapshot objs : snapshot.getChildren()){
-                 Libro li =objs.getValue(Libro.class);
-                 ListLibro.add(li);
-                 ListLibroNombre.add(""+li.getNombre()+" "+li.getEstado());
-                 arrayAdapterString =new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_expandable_list_item_1,ListLibroNombre);
-                 lvListadoLibros.setAdapter(arrayAdapterString);
-             }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 
 
     private void inicializarFireBase(){
